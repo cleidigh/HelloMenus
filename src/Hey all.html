@@ -1,0 +1,32 @@
+Hey all
+
+Perhaps this has a simple answer because I'm missing 
+something stupid. If not then I guess it's my question 
+for tomorrow unless someone has the quick answer.
+
+I can't get windows.create() to create a window that 
+is responsive to the content. This occurs creating 
+a window with either no body dimensions or with 
+min-height/width set on body.
+
+Example - should create window sized to content, but instead 
+creates a large window about 80% width of screen and 90%
+height. Should be "natural size" according to docs.
+
+  await browser.windows.create({url: "/minimalwindow.html", type: "popup"});
+
+html:
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Export html</title>
+</head>
+
+<body>
+	<div>test bbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
+</body>
+
+</html>
